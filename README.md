@@ -1,6 +1,7 @@
 # DATA-WOLVES
 
 
+![DATA WOLVES](https://github.com/Emdeowl/DATA-WOLVES-/assets/96479179/450b0cda-7134-4e7e-be08-6cfff88487e7)
 
 
 
