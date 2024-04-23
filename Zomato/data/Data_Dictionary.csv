@@ -1,0 +1,31 @@
+Field,Documentation
+order_id,Unique Identifier of an Order.
+order_time,Order Creation Timestamp (Local Timezone)
+analytical_customer_id,Unique identifier customers. No dim_customer is provided. Just treat this field as all the info you know about the customer
+is_acquisition,TRUE if the order is the first successful order of a customer. AKA 'New Customer'. Note: It is based on analytical customer id.
+is_successful,TRUE for successfully delivered orders and FALSE for the rest.
+reason,Shows the reason why the order failed
+sub_reason,Gives further details about the failure reason - if any.
+owner,"Shows which party is responsible for failure. Owners can be; FULFILMENT, TRANSPORT, CUSTOMER, PLATFORM, VENDOR"
+delivery_arrangement,"The delivery arrangement used to deliver this order. Takes two values: TGO: Delivered by Talabat, TMP: Delivered by the vendor"
+gmv_amount_lc,Amount of what customer pays for an order. High-Level Formula is: Basket Amount + Delivery Chargers - All types of Discounts (Local Currency)
+basket_amount_lc,"The total value of the goods (items) included in this order, including taxes, before any discounts. (Local Currency)"
+delivery_fee_amount_lc,Amount of Delivery Fee charges paid by the customer. (Local Currency)
+Payment Method,"The method used to pay. Can be: Cash, Online - Card (Credit Card), Online - Talabat (Talabat credit), Online Mixed (part with credit card and part with talabat credit)"
+actual_delivery_time,The duration it took to deliver the order. Measured from order creation until rider at customer. (in seconds)
+promised_delivery_time,The delivery duration which was promised to the customer upon order placement. (in seconds)
+order_delay,The time difference between actual delivery time and promised delivery time.
+dropoff_distance_manhattan,Distance from vendor/restaurant to customer.
+platform,"The device from which the order was placed. Can be: android, iOS, desktop web, mobile web."
+vertical_class,"Is it a food order or non-food (like grocery, pharamcy..etc)"
+vertical,"For non-food, which vertical exactly?"
+is_affordable_freedelivery,TRUE if there was no delivery fee for the order
+is_affordable_item,TRUE if there was a discount on one or more of the ordered items.
+is_affordable_gem,TRUE if this is a GEM order. To know more about GEM you cn visit the app and try it :)
+is_affordable_restaurant,TRUE if there was a discount offered by the restaurant.
+is_affordable_voucher,TRUE if a voucher was applied on this order
+is_affordable,TRUE if this order contains any kind of affordability
+affordability_amt_total,Total amount of discounts that were applied on the order
+City Cluster,The group of cities this order belongs to
+City,The city where this order was placed.
+Zone,The zone where this order was placed.
